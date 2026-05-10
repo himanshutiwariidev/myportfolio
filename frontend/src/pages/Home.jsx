@@ -27,7 +27,7 @@ const getSiteUrl = () => {
     return window.location.origin;
   }
 
-  return "http://localhost:5173";
+  return "https://technicaltiwariji.com";
 };
 
 export const Home = () => {
@@ -39,7 +39,7 @@ export const Home = () => {
   });
 
   const PROJECTS_VISIBLE_COUNT = 6;
-  const words = ["Er Himanshhu Tiwari", "A Web Developer"];
+  const words = ["Himanshhu Tiwari", "A Web Developer"];
   const colors = ["text-orange-400", "text-amber-300"];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
@@ -47,10 +47,10 @@ export const Home = () => {
   const currentWord = words[currentIndex];
   const currentColor = colors[currentIndex];
   const socialLinks = [
-    { href: "#", icon: <FaFacebookF /> },
-    { href: "#", icon: <FaInstagram /> },
-    { href: "#", icon: <FaTwitter /> },
-    { href: "#", icon: <FaLinkedin /> },
+    { href: "https://www.facebook.com/profile.php?id=100026762781780", icon: <FaFacebookF /> },
+    { href: "https://www.instagram.com/himanshhutiwari09?igsh=dTRyaDdubThndjI2", icon: <FaInstagram /> },
+    { href: "https://x.com/Tiwariji0121", icon: <FaTwitter /> },
+    { href: "https://www.linkedin.com/in/himanshutiwarii221", icon: <FaLinkedin /> },
   ];
 
   useEffect(() => {
@@ -120,14 +120,14 @@ export const Home = () => {
   ];
   const education = [
     {
-      title: "Full Stack Development",
-      subtitle: "Hands-on practical learning",
-      detail: "Focused on building modern web apps with frontend, backend, database, and deployment workflows.",
+      title: "M.TECH IN COMPUTER SCIENCE",
+      subtitle: "M.D.U, Rohtak (2025-2027)",
+      detail: "Focused on building Generative Ai and Machine Learning models, with a thesis on AI-driven web development tools.",
     },
     {
-      title: "Continuous Skill Growth",
-      subtitle: "Project-based experience",
-      detail: "Improving through real client work, responsive UI development, and performance-focused implementation.",
+      title: "B.TECH IN COMPUTER SCIENCE",
+      subtitle: "M.D.U, Rohtak (2021-2025)",
+      detail: "Focused on building modern web apps with frontend, backend, database, and deployment workflows.",
     },
   ];
 const skillstwo = [
@@ -619,7 +619,7 @@ const faqs = [
 	                <p className="mt-1 text-sm text-orange-100/60">Satisfied Clients</p>
 	              </div>
 	              <div className="rounded-2xl border border-orange-500/15 bg-black/40 px-4 py-4">
-	                <p className="text-2xl font-bold text-orange-50">3+</p>
+	                <p className="text-2xl font-bold text-orange-50">5+</p>
 	                <p className="mt-1 text-sm text-orange-100/60">Years of Experience</p>
 	              </div>
 	            </div>
@@ -894,6 +894,9 @@ const faqs = [
               <option value="Web Development">Web Development</option>
               <option value="UI/UX Design">UI/UX Design</option>
               <option value="SEO Optimization">SEO Optimization</option>
+               <option value="Crm development">Crm development</option>
+               <option value="E-commerce Solutions">E-commerce Solutions</option>
+               <option value="Custom Software">Custom Software</option>
             </select>
             <textarea
               rows="4"
@@ -954,7 +957,7 @@ const faqs = [
               <FaLinkedin /> LinkedIn
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/himanshutiwariidev"
               className="border border-orange-500 text-orange-400 px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition flex items-center gap-2"
               target="_blank"
               rel="noreferrer"

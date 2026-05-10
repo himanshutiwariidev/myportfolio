@@ -12,7 +12,7 @@ const getSiteUrl = () => {
     return window.location.origin;
   }
 
-  return 'http://localhost:5173';
+  return 'https://technicaltiwariji.com';
 };
 
 export const BlogListingPage = ({ disableSeo = false }) => {

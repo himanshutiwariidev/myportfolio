@@ -47,7 +47,7 @@ export const AdminLoginPage = () => {
       <div className="mx-auto max-w-xl space-y-8">
         <div className="space-y-4 text-center">
           <p className="text-sm uppercase tracking-[0.35em] text-orange-300">Admin Access</p>
-          <h1 className="text-4xl font-semibold text-white md:text-5xl">Login to manage blog posts</h1>
+          <h1 className="text-3xl font-semibold text-white md:text-4xl">Login to manage blog posts</h1>
           <p className="text-orange-50/70">
             Enter your admin credentials to access the blog dashboard.
           </p>
@@ -69,7 +69,7 @@ export const AdminLoginPage = () => {
                   adminId: event.target.value,
                 }))
               }
-              placeholder="Enter ADMIN_ID from Backend/.env"
+              placeholder="Enter ADMIN_ID "
               className="w-full rounded-2xl border border-orange-500/20 bg-neutral-950/80 px-4 py-3 text-white outline-none transition focus:border-orange-400"
               required
             />
@@ -87,7 +87,7 @@ export const AdminLoginPage = () => {
                   password: event.target.value,
                 }))
               }
-              placeholder="Enter ADMIN_PASSWORD from Backend/.env"
+              placeholder="Enter ADMIN_PASSWORD"
               className="w-full rounded-2xl border border-orange-500/20 bg-neutral-950/80 px-4 py-3 text-white outline-none transition focus:border-orange-400"
               required
             />

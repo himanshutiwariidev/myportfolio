@@ -13,7 +13,7 @@ const getSiteUrl = () => {
     return window.location.origin;
   }
 
-  return 'http://localhost:5173';
+  return 'https://technicaltiwariji.com';
 };
 
 const getImageUrl = (image) => {
@@ -87,7 +87,7 @@ export const BlogSinglePage = () => {
           <p className="text-sm uppercase tracking-[0.35em] text-orange-300">
             {blog.author} • {new Date(blog.createdAt).toLocaleDateString()}
           </p>
-          <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl">{blog.title}</h1>
+          <h1 className="text-3xl font-semibold leading-tight text-white md:text-4xl">{blog.title}</h1>
           {blog.shortDescription ? (
             <p className="text-xl leading-8 text-orange-50/75">{blog.shortDescription}</p>
           ) : null}
