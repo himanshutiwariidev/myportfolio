@@ -17,16 +17,13 @@ const initialFormState = {
 };
 
 const getImageUrl = (image) => {
-  if (!image) {
-    return '';
-  }
+  if (!image) return '';
 
   if (image.startsWith('http')) {
     return image;
   }
 
-  const apiBase = (import.meta.env.VITE_API_URL || 'http://localhost:5001/api').replace('/api', '');
-  return `${apiBase}${image}`;
+  return `https://technicaltiwariji.com${image}`;
 };
 
 export const AdminBlogFormPage = () => {
