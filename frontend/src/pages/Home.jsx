@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGithub, FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
-import { SiMongodb, SiExpress } from 'react-icons/si';
+import { SiMongodb, SiExpress, SiNextdotjs, SiPython, SiSelenium } from 'react-icons/si';
 import { FaUsers, FaCode, FaProjectDiagram, FaLaptopCode,FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaLinkedin, FaPaperPlane,
-  FaPaintBrush,
   FaShoppingCart,
   FaTools,
   FaProjectDiagram as FaSystems,
-  FaCloudUploadAlt,} from 'react-icons/fa';
+  FaMobileAlt,
+  FaSearch,} from 'react-icons/fa';
 import projectImage1 from "../assets/image1.png";
 import projectImage2 from "../assets/image2.png";
 import projectImage3 from "../assets/image3.png";
 import projectImage4 from "../assets/image4.png";
 import projectImage5 from "../assets/image5.png";
 import projectImage6 from "../assets/image6.png";
+import projectImage7 from "../assets/image7.png";
 import ToolsOrbit from "./Toolorbit";
 import { BlogListingPage } from "./blog/BlogListingPage";
 import { useSeo } from "../hooks/useSeo";
@@ -101,7 +102,7 @@ export const Home = () => {
     },
     {
       icon: <FaLaptopCode className="text-3xl text-white" />,
-      count: 3,
+      count: 5,
       label: "Years of Experience",
       detail: "Hands-on experience building responsive and conversion-focused products.",
       accent: "from-orange-300 via-orange-500 to-amber-500",
@@ -131,14 +132,18 @@ export const Home = () => {
     },
   ];
 const skillstwo = [
-  { name: "HTML", icon: <FaHtml5 className="text-orange-500 text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-bounce" },
-  { name: "CSS", icon: <FaCss3Alt className="text-blue-500 text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-pulse" },
-  { name: "JavaScript", icon: <FaJs className="text-yellow-400 text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-bounce" },
-  { name: "React.js", icon: <FaReact className="text-cyan-400 text-4xl group-hover:scale-110 transition duration-300 animate-spin" style={{ animationDuration: "8s" }} />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-pulse" },
-  { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-pulse" },
-  { name: "Express.js", icon: <SiExpress className="text-slate-100 text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-bounce" },
-  { name: "MongoDB", icon: <SiMongodb className="text-emerald-500 text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-pulse" },
-  { name: "Git & GitHub", icon: <FaGithub className="text-white text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-bounce" },
+  { name: "HTML", icon: <FaHtml5 className="text-orange-500 text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-icon-loop" },
+  { name: "CSS", icon: <FaCss3Alt className="text-blue-500 text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-icon-loop" },
+  { name: "JavaScript", icon: <FaJs className="text-yellow-400 text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-icon-loop" },
+  { name: "React.js", icon: <FaReact className="text-cyan-400 text-4xl group-hover:scale-110 transition duration-300 animate-spin" style={{ animationDuration: "8s" }} />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-icon-loop" },
+  { name: "Next.js", icon: <SiNextdotjs className="text-white text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-icon-loop" },
+  { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-icon-loop" },
+  { name: "Express.js", icon: <SiExpress className="text-slate-100 text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-icon-loop" },
+  { name: "MongoDB", icon: <SiMongodb className="text-emerald-500 text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-icon-loop" },
+  { name: "React Native", icon: <FaReact className="text-sky-400 text-4xl group-hover:scale-110 transition duration-300 animate-spin" style={{ animationDuration: "8s" }} />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-icon-loop" },
+  { name: "Python", icon: <SiPython className="text-blue-400 text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-icon-loop" },
+  { name: "Selenium", icon: <SiSelenium className="text-green-400 text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-icon-loop" },
+  { name: "Git & GitHub", icon: <FaGithub className="text-white text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-icon-loop" },
 ];
 const services = [
   {
@@ -149,10 +154,10 @@ const services = [
     color: 'text-sky-400',
   },
   {
-    title: 'UI/UX Design',
+    title: 'Mobile App Development',
     description:
-      'Clean, intuitive interfaces designed to provide the best possible user experience on all devices.',
-    icon: FaPaintBrush,
+      'Cross-platform mobile apps with smooth interfaces, reliable performance, and scalable architecture.',
+    icon: FaMobileAlt,
     color: 'text-pink-400',
   },
   {
@@ -177,24 +182,16 @@ const services = [
     color: 'text-violet-400',
   },
   {
-    title: 'Web Hosting & Deployment',
+    title: 'SEO Services',
     description:
-      'Fast and reliable cloud hosting with CI/CD-based deployment workflows for minimal downtime.',
-    icon: FaCloudUploadAlt,
+      'Search-friendly website optimization to improve visibility, structure, performance, and organic reach.',
+    icon: FaSearch,
     color: 'text-cyan-400',
   },
 ];
 
 const projects = [
-  {
-    title: 'Keytel Design Studio',
-    url: 'https://keyteldesignstudio.com/',
-    image: projectImage1,
-    domain: 'keyteldesignstudio.com',
-    category: 'Brand & Design',
-    accent: 'from-orange-400 via-orange-500 to-amber-300',
-    description: 'A polished business website focused on presenting creative services with a strong visual identity.',
-  },
+  
   {
     title: 'Policy Bima Karalo',
     url: 'https://policybimakaralo.com/',
@@ -203,15 +200,6 @@ const projects = [
     category: 'Insurance',
     accent: 'from-orange-500 via-amber-400 to-orange-300',
     description: 'A professional service website built to communicate trust, clarity, and customer support for policy inquiries.',
-  },
-  {
-    title: 'Shri Balaji Enterprise',
-    url: 'https://shribalajienterprise.netlify.app/',
-    image: projectImage3,
-    domain: 'shribalajienterprise.netlify.app',
-    category: 'Enterprise',
-    accent: 'from-orange-400 via-amber-500 to-yellow-500',
-    description: 'A company presence website designed to showcase services, trust signals, and business information clearly.',
   },
   {
     title: 'MediShipper',
@@ -231,6 +219,25 @@ const projects = [
     accent: 'from-orange-600 via-orange-500 to-amber-400',
     description: 'A healthcare business website built to present services, credibility, and patient-focused communication.',
   },
+  {
+    title: 'Cutlery Web App',
+    url: 'https://cutlerywebapp.netlify.app/',
+    image: projectImage7,
+    domain: 'cutlerywebapp.netlify.app',
+    category: 'Product Showcase',
+    accent: 'from-orange-500 via-neutral-700 to-neutral-900',
+    description: 'A product-focused website created to present inventory with a simple, elegant, and commerce-ready layout.',
+  },
+  {
+    title: 'Shri Balaji Enterprise',
+    url: 'https://shribalajienterprise.netlify.app/',
+    image: projectImage3,
+    domain: 'shribalajienterprise.netlify.app',
+    category: 'Enterprise',
+    accent: 'from-orange-400 via-amber-500 to-yellow-500',
+    description: 'A company presence website designed to showcase services, trust signals, and business information clearly.',
+  },
+  
   {
     title: 'Taxi Tribe',
     url: 'https://taxitribe.in/',
@@ -258,15 +265,7 @@ const projects = [
     accent: 'from-orange-400 via-orange-500 to-amber-300',
     description: 'A real estate web app crafted to spotlight listings, trust, and a clean browsing experience.',
   },
-  {
-    title: 'Cutlery Web App',
-    url: 'https://cutlerywebapp.netlify.app/',
-    image: 'https://image.thum.io/get/width/1200/noanimate/https://cutlerywebapp.netlify.app/',
-    domain: 'cutlerywebapp.netlify.app',
-    category: 'Product Showcase',
-    accent: 'from-orange-500 via-neutral-700 to-neutral-900',
-    description: 'A product-focused website created to present inventory with a simple, elegant, and commerce-ready layout.',
-  },
+  
   {
     title: 'HiTech Real Estates',
     url: 'https://hitechrealestates.netlify.app/',
@@ -276,11 +275,20 @@ const projects = [
     accent: 'from-orange-500 via-amber-400 to-orange-300',
     description: 'A real estate business website tailored for modern property presentation and lead generation.',
   },
+  {
+    title: 'Keytel Design Studio',
+    url: 'https://keyteldesignstudio.com/',
+    image: projectImage1,
+    domain: 'keyteldesignstudio.com',
+    category: 'Brand & Design',
+    accent: 'from-orange-400 via-orange-500 to-amber-300',
+    description: 'A polished business website focused on presenting creative services with a strong visual identity.',
+  },
 ];
 const faqs = [
   {
     question: "What services do you offer?",
-    answer: "I offer full-stack web development, UI/UX design, SEO optimization, and website maintenance services.",
+    answer: "I offer full-stack web development, mobile app development, SEO services, ecommerce solutions, and website maintenance services.",
   },
   {
     question: "How can I contact you for a project?",
@@ -305,6 +313,10 @@ const faqs = [
   const visibleProjects = showAllProjects
     ? projects
     : projects.slice(0, PROJECTS_VISIBLE_COUNT);
+  const skillRows = [
+    skillstwo.slice(0, 6),
+    skillstwo.slice(6, 12),
+  ];
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -690,27 +702,44 @@ const faqs = [
       </p>
     </div>
 
-    <div className="mt-10 grid grid-cols-2 gap-5 md:grid-cols-4">
-      {skillstwo.map((skilltwo, index) => (
-        <article
-          key={index}
-          className={`group relative overflow-hidden rounded-[28px] border ${skilltwo.border} bg-neutral-900/70 p-6 text-center shadow-2xl backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:bg-neutral-900 ${skilltwo.glow}`}
+    <div className="services-marquee-list mt-10 space-y-5 overflow-hidden">
+      {skillRows.map((row, rowIndex) => (
+        <div
+          key={rowIndex}
+          className="services-marquee overflow-hidden"
         >
-          <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full bg-white/6 blur-2xl"></div>
+          <div className={`services-marquee-track ${rowIndex === 0 ? "services-marquee-left" : "services-marquee-right"}`}>
+            {[0, 1].map((groupIndex) => (
+              <div
+                key={groupIndex}
+                className="services-marquee-group"
+                aria-hidden={groupIndex === 1}
+              >
+                {row.map((skilltwo, index) => (
+                  <article
+                    key={`${skilltwo.name}-${groupIndex}-${index}`}
+                    className={`group relative w-44 shrink-0 overflow-hidden rounded-[28px] border ${skilltwo.border} bg-neutral-900/70 p-5 text-center shadow-2xl backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:bg-neutral-900 md:w-52 md:p-6 ${skilltwo.glow}`}
+                  >
+                    <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full bg-white/6 blur-2xl"></div>
 
-          <div className="relative">
-            <div className={`mx-auto flex h-20 w-20 items-center justify-center rounded-3xl border border-white/10 bg-black/70 shadow-lg ${skilltwo.motion}`}>
-              {skilltwo.icon}
-            </div>
-            <p className="mt-5 text-base font-semibold text-white md:text-lg">{skilltwo.name}</p>
-            <div className="mt-4 flex items-center justify-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-white/50"></span>
-              <span className="text-[9px] md:text-[11px] font-semibold uppercase tracking-[0.25em] text-white/55">
-                Active Stack
-              </span>
-            </div>
+                    <div className="relative">
+                      <div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-3xl border border-white/10 bg-black/70 shadow-lg md:h-20 md:w-20 ${skilltwo.motion}`}>
+                        {skilltwo.icon}
+                      </div>
+                      <p className="mt-4 text-sm font-semibold text-white md:mt-5 md:text-lg">{skilltwo.name}</p>
+                      <div className="mt-4 flex items-center justify-center gap-2">
+                        <span className="h-2 w-2 rounded-full bg-white/50"></span>
+                        <span className="text-[9px] md:text-[11px] font-semibold uppercase tracking-[0.25em] text-white/55">
+                          Active Stack
+                        </span>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            ))}
           </div>
-        </article>
+        </div>
       ))}
     </div>
   </div>
@@ -892,8 +921,8 @@ const faqs = [
             <select className="w-full border border-orange-500/20 bg-neutral-900 rounded px-4 py-3 text-orange-100/70 text-sm focus:ring-2 focus:ring-orange-400 outline-none">
               <option value="">Select Service</option>
               <option value="Web Development">Web Development</option>
-              <option value="UI/UX Design">UI/UX Design</option>
-              <option value="SEO Optimization">SEO Optimization</option>
+              <option value="Mobile App Development">Mobile App Development</option>
+              <option value="SEO Services">SEO Services</option>
                <option value="Crm development">Crm development</option>
                <option value="E-commerce Solutions">E-commerce Solutions</option>
                <option value="Custom Software">Custom Software</option>

@@ -27,6 +27,127 @@
     animation: orbit-spin-slow-reverse 24s linear infinite;
 }
 
+@keyframes icon-card-loop {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.animate-icon-loop {
+    animation: icon-card-loop 4s ease-in-out infinite;
+}
+
+@keyframes services-marquee-to-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes services-marquee-to-right {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes services-marquee-to-top {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes services-marquee-to-bottom {
+    from {
+        transform: translateY(-50%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.services-marquee {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.services-marquee-track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+}
+
+.services-marquee-group {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.services-marquee-left {
+    animation: services-marquee-to-right 32s linear infinite;
+}
+
+.services-marquee-right {
+    animation: services-marquee-to-left 32s linear infinite;
+}
+
+@media (max-width: 767px) {
+    .services-marquee-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        height: 34rem;
+    }
+
+    .services-marquee {
+        height: 100%;
+        -webkit-mask-image: linear-gradient(to bottom, transparent, #000 8%, #000 92%, transparent);
+        mask-image: linear-gradient(to bottom, transparent, #000 8%, #000 92%, transparent);
+    }
+
+    .services-marquee-track,
+    .services-marquee-group {
+        flex-direction: column;
+    }
+
+    .services-marquee-group {
+        gap: 1rem;
+        padding-right: 0;
+        padding-bottom: 1rem;
+    }
+
+    .services-marquee article {
+        width: 100%;
+    }
+
+    .services-marquee-left {
+        animation: services-marquee-to-bottom 28s linear infinite;
+    }
+
+    .services-marquee-right {
+        animation: services-marquee-to-top 28s linear infinite;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .services-marquee-left,
+    .services-marquee-right,
+    .animate-icon-loop {
+        animation-play-state: paused;
+    }
+}
+
 body{
     font-family: "Poppins";
     background: #0c0c0c;
