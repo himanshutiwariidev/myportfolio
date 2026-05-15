@@ -62,7 +62,7 @@ const createBlog = async (req, res, next) => {
       shortDescription: req.body.shortDescription,
       image,
       imageAlt: req.body.imageAlt,
-      author: req.body.author || 'Admin',
+      author: req.body.author || 'TechnicalTiwariji',
       isPublished:
         req.body.isPublished === undefined ? true : String(req.body.isPublished) === 'true',
     });
@@ -159,7 +159,7 @@ const updateBlog = async (req, res, next) => {
     blog.content = req.body.content || blog.content;
     blog.shortDescription = req.body.shortDescription || '';
     blog.imageAlt = req.body.imageAlt || '';
-    blog.author = req.body.author || 'Admin';
+    blog.author = req.body.author || 'technicaltiwarijii';
     blog.isPublished =
       req.body.isPublished === undefined ? blog.isPublished : String(req.body.isPublished) === 'true';
 
