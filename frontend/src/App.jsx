@@ -10,6 +10,8 @@ import { AdminBlogListPage } from './pages/blog/AdminBlogListPage';
 import { AdminBlogFormPage } from './pages/blog/AdminBlogFormPage';
 import { AdminLoginPage } from './pages/blog/AdminLoginPage';
 import { ProtectedAdminRoute } from './components/blog/ProtectedAdminRoute';
+import { ServiceDetailPage } from './pages/ServiceDetailPage';
+import { ContactPage } from './pages/ContactPage';
 
 export const App = () => {
   return (
@@ -17,6 +19,8 @@ export const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/services/:slug" element={<ServiceDetailPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/blog" element={<BlogListingPage />} />
         <Route path="/blog/:slug" element={<BlogSinglePage />} />
         <Route path="/admin/login" element={<AdminLoginPage />} />

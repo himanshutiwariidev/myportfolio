@@ -46,7 +46,7 @@ export const BlogListingPage = ({ disableSeo = false }) => {
   }, []);
 
   return (
-    <section className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(251,146,60,0.16),_transparent_30%),linear-gradient(180deg,_#050505_0%,_#121212_100%)] px-4 py-16 md:px-8">
+    <section className=" bg-[radial-gradient(circle_at_top,_rgba(251,146,60,0.16),_transparent_30%),linear-gradient(180deg,_#050505_0%,_#121212_100%)] px-4 py-16 md:px-8">
       <div className="mx-auto max-w-7xl space-y-10">
         <div className="max-w-5xl space-y-4">
           <p className="text-sm uppercase tracking-[0.4em] text-orange-300">Insights & Articles</p>

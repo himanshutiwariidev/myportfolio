@@ -3,11 +3,8 @@ import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGithub, FaFacebookF, FaI
 import { SiMongodb, SiExpress, SiNextdotjs, SiPython, SiSelenium } from 'react-icons/si';
 import { FaUsers, FaCode, FaProjectDiagram, FaLaptopCode,FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaLinkedin, FaPaperPlane,
-  FaShoppingCart,
-  FaTools,
-  FaProjectDiagram as FaSystems,
-  FaMobileAlt,
-  FaSearch,} from 'react-icons/fa';
+} from 'react-icons/fa';
+import { Link } from "react-router-dom";
 import projectImage1 from "../assets/image1.png";
 import projectImage2 from "../assets/image2.png";
 import projectImage3 from "../assets/image3.png";
@@ -18,6 +15,7 @@ import projectImage7 from "../assets/image7.png";
 import ToolsOrbit from "./Toolorbit";
 import { BlogListingPage } from "./blog/BlogListingPage";
 import { useSeo } from "../hooks/useSeo";
+import { services } from "../data/services";
 
 const getSiteUrl = () => {
   if (import.meta.env.VITE_SITE_URL) {
@@ -145,51 +143,6 @@ const skillstwo = [
   { name: "Selenium", icon: <SiSelenium className="text-green-400 text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-icon-loop" },
   { name: "Git & GitHub", icon: <FaGithub className="text-white text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-icon-loop" },
 ];
-const services = [
-  {
-    title: 'Custom Website Development',
-    description:
-      'Tailored website solutions with responsive design, fast load speeds, and scalable architecture.',
-    icon: FaCode,
-    color: 'text-sky-400',
-  },
-  {
-    title: 'Mobile App Development',
-    description:
-      'Cross-platform mobile apps with smooth interfaces, reliable performance, and scalable architecture.',
-    icon: FaMobileAlt,
-    color: 'text-pink-400',
-  },
-  {
-    title: 'E-commerce Solutions',
-    description:
-      'Secure, full-featured online stores with inventory management, payment integration, and analytics.',
-    icon: FaShoppingCart,
-    color: 'text-emerald-400',
-  },
-  {
-    title: 'Website Maintenance',
-    description:
-      'Ongoing updates, backups, security patches, and feature upgrades to keep your site fresh.',
-    icon: FaTools,
-    color: 'text-amber-400',
-  },
-  {
-    title: 'CRM & ERP Systems',
-    description:
-      'We build custom CRM and ERP dashboards to streamline operations, customer workflows, reporting, and team collaboration.',
-    icon: FaSystems,
-    color: 'text-violet-400',
-  },
-  {
-    title: 'SEO Services',
-    description:
-      'Search-friendly website optimization to improve visibility, structure, performance, and organic reach.',
-    icon: FaSearch,
-    color: 'text-cyan-400',
-  },
-];
-
 const projects = [
   
   {
@@ -755,10 +708,15 @@ const faqs = [
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-left">
-          {services.map((service, index) => {
+          {services.map((service) => {
             const Icon = service.icon;
             return (
-              <div key={index} className="flex items-start gap-4 rounded-3xl border border-orange-500/15 bg-white/5 p-5">
+              <Link
+                key={service.slug}
+                to={`/services/${service.slug}`}
+                className="group flex items-start gap-4 rounded-3xl border border-orange-500/15 bg-white/5 p-5 transition duration-300 hover:-translate-y-1 hover:border-orange-400/50 hover:bg-white/10"
+                aria-label={`View ${service.title} details`}
+              >
                 <div className={`mt-1 ${service.color}`}>
                   <Icon className="text-2xl" />
                 </div>
@@ -769,9 +727,12 @@ const faqs = [
                   <p className="text-orange-100/65 text-sm mt-1">
                     {service.description}
                   </p>
-                  <div className={`mt-3 h-px w-10 ${service.color} bg-current`}></div>
+                  <div className={`mt-3 h-px w-10 ${service.color} bg-current transition-all duration-300 group-hover:w-20`}></div>
+                  <span className="mt-3 inline-flex text-xs font-semibold uppercase tracking-[0.2em] text-orange-200/70">
+                    View Details
+                  </span>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
@@ -896,7 +857,7 @@ const faqs = [
     <BlogListingPage disableSeo />
     {/* contact */}
     <section id="contact" className="bg-neutral-950 py-5 md:px-4 ">
-      <h1 className="md:hidden text-2xl text-orange-400 text-center font-semibold">GET IN TOUCH </h1>
+      <h1 className=" text-2xl text-orange-400 text-center font-semibold py-5">GET IN TOUCH </h1>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 bg-white/5 border border-orange-500/15 rounded-xl shadow-md p-6 sm:p-10">
         {/* Contact Form */}
         <div>
@@ -920,12 +881,11 @@ const faqs = [
             />
             <select className="w-full border border-orange-500/20 bg-neutral-900 rounded px-4 py-3 text-orange-100/70 text-sm focus:ring-2 focus:ring-orange-400 outline-none">
               <option value="">Select Service</option>
-              <option value="Web Development">Web Development</option>
-              <option value="Mobile App Development">Mobile App Development</option>
-              <option value="SEO Services">SEO Services</option>
-               <option value="Crm development">Crm development</option>
-               <option value="E-commerce Solutions">E-commerce Solutions</option>
-               <option value="Custom Software">Custom Software</option>
+              {services.map((service) => (
+                <option key={service.slug} value={service.title}>
+                  {service.title}
+                </option>
+              ))}
             </select>
             <textarea
               rows="4"

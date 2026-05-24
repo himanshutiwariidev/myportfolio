@@ -8,6 +8,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from 'react-icons/fa';
+import { services } from '../data/services';
 
 export default function Footer() {
   return (
@@ -29,21 +30,24 @@ export default function Footer() {
           </h3>
           <ul className="mt-2 space-y-2">
             <li><Link to="/" className="transition hover:text-orange-400">Home</Link></li>
-            <li><a href="#" className="transition hover:text-orange-400">Services</a></li>
             <li><Link to="/blog" className="transition hover:text-orange-400">Blog</Link></li>
+            <li><Link to="/contact" className="transition hover:text-orange-400">Contact</Link></li>
             <li><Link to="/admin/login" className="transition hover:text-orange-400">Admin</Link></li>
           </ul>
         </div>
 
         <div>
           <h3 className="mb-3 inline-block border-b-2 border-orange-400 text-lg font-semibold text-orange-400">
-            Legal
+            Services
           </h3>
           <ul className="mt-2 space-y-2">
-            <li><a href="#" className="transition hover:text-orange-400">Privacy Policy</a></li>
-            <li><a href="#" className="transition hover:text-orange-400">Terms & Conditions</a></li>
-            <li><a href="#" className="transition hover:text-orange-400">Help</a></li>
-            <li><a href="#" className="transition hover:text-orange-400">FAQ</a></li>
+            {services.slice(0, 4).map((service) => (
+              <li key={service.slug}>
+                <Link to={`/services/${service.slug}`} className="transition hover:text-orange-400">
+                  {service.shortTitle}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
