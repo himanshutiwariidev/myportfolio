@@ -2,18 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BlogAdminTable } from '../../components/blog/BlogAdminTable';
 import api, { clearAdminToken, getAdminHeaders } from '../../lib/api';
-import { useSeo } from '../../hooks/useSeo';
+import { SeoHead } from '../../components/seo/SeoHead';
 
 export const AdminBlogListPage = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [isDeletingId, setIsDeletingId] = useState('');
-
-  useSeo({
-    title: 'Admin Blogs | TechnicalTiwarii',
-    description: 'Manage blog articles from the TechnicalTiwarii admin dashboard.',
-  });
 
   const fetchBlogs = async () => {
     try {
@@ -61,6 +56,7 @@ export const AdminBlogListPage = () => {
 
   return (
     <section className="min-h-screen bg-[linear-gradient(180deg,_#080808_0%,_#141414_100%)] px-4 py-16 md:px-8">
+      <SeoHead title="Admin Blogs | Himanshhu Tiwari" robots="noindex, nofollow" />
       <div className="mx-auto max-w-7xl space-y-8">
         <div className="flex flex-col gap-6 rounded-[2rem] border border-orange-500/20 bg-black/30 p-6 md:flex-row md:items-end md:justify-between">
           <div className="space-y-3">

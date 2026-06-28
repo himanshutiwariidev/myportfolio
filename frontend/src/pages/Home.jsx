@@ -5,37 +5,22 @@ import { FaUsers, FaCode, FaProjectDiagram, FaLaptopCode,FaChevronDown, FaChevro
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaLinkedin, FaPaperPlane,
 } from 'react-icons/fa';
 import { Link } from "react-router-dom";
-import projectImage1 from "../assets/image1.png";
-import projectImage2 from "../assets/image2.png";
-import projectImage3 from "../assets/image3.png";
-import projectImage4 from "../assets/image4.png";
-import projectImage5 from "../assets/image5.png";
-import projectImage6 from "../assets/image6.png";
-import projectImage7 from "../assets/image7.png";
+import projectImage1 from "../assets/keytel-design-studio-website-preview.png";
+import projectImage2 from "../assets/policy-bima-karalo-insurance-website-preview.png";
+import projectImage3 from "../assets/shri-balaji-enterprise-website-preview.png";
+import projectImage4 from "../assets/medishipper-healthcare-logistics-website-preview.png";
+import projectImage5 from "../assets/rsb-medicare-website-preview.png";
+import projectImage6 from "../assets/taxi-tribe-transport-website-preview.png";
+import projectImage7 from "../assets/cutlery-web-app-product-showcase-preview.png";
+import projectImagemyriss from "../assets/myriss.png"
 import ToolsOrbit from "./Toolorbit";
 import { BlogListingPage } from "./blog/BlogListingPage";
-import { useSeo } from "../hooks/useSeo";
 import { services } from "../data/services";
-
-const getSiteUrl = () => {
-  if (import.meta.env.VITE_SITE_URL) {
-    return import.meta.env.VITE_SITE_URL.replace(/\/$/, "");
-  }
-
-  if (typeof window !== "undefined") {
-    return window.location.origin;
-  }
-
-  return "https://technicaltiwariji.com";
-};
+import { SeoHead } from "../components/seo/SeoHead";
+import { siteUrl } from "../lib/siteConfig";
+import { faqPageSchema, portfolioSchema } from "../lib/schema";
 
 export const Home = () => {
-  useSeo({
-    title: "Himanshhu Tiwari | Full Stack Web Developer | CRM Developer | Ecommerce Developer",
-    description:
-      "Himanshhu Tiwari is a professional Full Stack Web Developer specializing in MERN stack, CRM development, and ecommerce solutions. Explore portfolio, projects, and technical blogs.",
-    canonical: `${getSiteUrl()}/`,
-  });
 
   const PROJECTS_VISIBLE_COUNT = 6;
   const words = ["Himanshhu Tiwari", "A Web Developer"];
@@ -144,6 +129,16 @@ const skillstwo = [
   { name: "Git & GitHub", icon: <FaGithub className="text-white text-4xl group-hover:scale-110 transition duration-300" />, border: "border-white/10", glow: "shadow-black/30", motion: "animate-icon-loop" },
 ];
 const projects = [
+  {
+  title: 'Myriss',
+  url: 'https://myriss.technicaltiwariji.com/',
+  image: projectImagemyriss,
+  domain: 'myriss.technicaltiwariji.com',
+  category: 'Fashion & Ecommerce',
+  accent: 'from-orange-500 via-amber-400 to-orange-300',
+  description:
+    'A modern fashion ecommerce store for men, women, and kids — built for smooth and a confident shopping experience.',
+},
   
   {
     title: 'Policy Bima Karalo',
@@ -276,8 +271,14 @@ const faqs = [
   };
   return (
     <>
-    <div className="bg-neutral-950 text-orange-50 overflow-x-hidden">
-<section className="relative isolate overflow-hidden px-4 py-10 md:px-10 md:py-16">
+    <main className="bg-neutral-950 text-orange-50 overflow-x-hidden">
+    <SeoHead
+      title="Himanshhu Tiwari | Best Website Development Company in India | CRM, Ecommerce & Android App Developer"
+      description="Affordable, custom website development, ecommerce, CRM, School ERP, and Android app development services for startups and small businesses across India. Explore live projects and start your build."
+      canonical={`${siteUrl}/`}
+      jsonLd={[faqPageSchema(faqs), portfolioSchema(projects)]}
+    />
+<section className="relative isolate overflow-hidden px-4 py-10 md:px-10 md:pt-16">
   <div className="absolute inset-0 -z-10 bg-gradient-to-br from-neutral-950 via-black to-neutral-900"></div>
   <div className="absolute -left-12 top-8 -z-10 h-40 w-40 rounded-full bg-orange-500/20 blur-3xl md:h-72 md:w-72"></div>
   <div className="absolute right-0 top-1/3 -z-10 h-48 w-48 rounded-full bg-amber-400/15 blur-3xl md:h-80 md:w-80"></div>
@@ -296,12 +297,12 @@ const faqs = [
         </span>
       </div>
 
-      <h1 className="hidden md:block md:mt-6 text-3xl font-bold md:font-extrabold leading-tight text-orange-50 md:text-5xl">
+      <p className="hidden md:block md:mt-6 text-3xl font-bold md:font-extrabold leading-tight text-orange-50 md:text-5xl">
         Building websites that feel
         <span className="block bg-gradient-to-r from-orange-300 via-orange-500 to-amber-300 bg-clip-text text-transparent">
           bold, fast, and memorable.
         </span>
-      </h1>
+      </p>
 
       <div className="hidden md:block mt-5 min-h-[3rem] text-2xl font-bold md:min-h-[3.5rem] md:text-4xl">
         <span className="text-orange-100/80">Hi, I&apos;m </span>
@@ -354,7 +355,7 @@ const faqs = [
       </div>
       
       <p className="hidden md:block mx-auto  max-w-2xl text-base leading-7 text-white md:text-lg lg:mx-0">
-        I design and develop responsive business websites and full-stack web apps that combine clean UI, smooth performance, and practical results for real clients.
+        I design and develop responsive business websites and full-stack web apps with company-grade quality at small-business-friendly pricing — from custom website development to ecommerce, CRM, School ERP, and Android app development for clients across India.
       </p>
 
       <div className="mt-8 flex flex-row items-center gap-4 justify-center lg:justify-start">
@@ -491,6 +492,7 @@ const faqs = [
     
 	</section>
 
+
 <section className="relative overflow-hidden px-4 pt-3 pb-8 md:px-6 md:py-12">
   <div className="absolute inset-0 bg-gradient-to-br from-black via-neutral-950 to-neutral-900"></div>
   <div className="absolute left-0 top-10 h-48 w-48 rounded-full bg-orange-500/10 blur-3xl"></div>
@@ -571,7 +573,13 @@ const faqs = [
 	              Turning ideas into clean, scalable, and user-friendly digital experiences
 	            </h2>
 	            <p className="mt-4 text-sm leading-7 text-orange-100/70 md:text-base">
-	              With a strong foundation in both front-end and back-end development, I build websites and web applications that balance visual appeal, usability, and real business value. My goal is to create digital products that are modern, reliable, and built for growth.
+	              With a strong foundation in both front-end and back-end development, I build websites and web applications that balance visual appeal, usability, and real business value. From <Link to="/services/custom-website-development" className="text-orange-300 underline-offset-2 hover:underline">custom website development</Link> for startups to <Link to="/services/ecommerce-solutions" className="text-orange-300 underline-offset-2 hover:underline">ecommerce and Shopify store development</Link>, every project is built to be modern, reliable, and ready to grow.
+	            </p>
+	            <p className="mt-3 text-sm leading-7 text-orange-100/70 md:text-base">
+	              <Link to="/about-himanshhu-tiwari" className="text-orange-300 underline-offset-2 hover:underline">
+	                About Himanshhu Tiwari
+	              </Link>
+	              , Full Stack Web Developer.
 	            </p>
 
 	            <div className="mt-6 grid gap-4 sm:grid-cols-3">
@@ -699,12 +707,12 @@ const faqs = [
 </section>
 
 {/* services */}
-  <section className="bg-black py-10">
+  <section id="services" className="bg-black py-10">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <p className="text-sm uppercase text-orange-200/60 tracking-wide mb-2">What We Do</p>
-        <h2 className="text-2xl md:text-4xl font-bold text-orange-400 mb-4">Our Web Development Services</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-orange-400 mb-4">Our Services</h2>
         <p className="text-orange-100/70 max-w-2xl mx-auto mb-12">
-          We help businesses build strong digital foundations with modern websites and full-stack solutions.
+          Website development, ecommerce and Shopify store development, custom CRM software, School ERP, and Android app development — built and supported across India.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-left">
@@ -767,7 +775,7 @@ const faqs = [
               <div className="relative aspect-[16/8] overflow-hidden  border border-orange-500/15 ">
                 <img
                   src={project.image}
-                  alt={`${project.title} preview`}
+                  alt={`${project.title} - ${project.category} website built by Himanshhu Tiwari`}
                   className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
@@ -819,6 +827,7 @@ const faqs = [
         )}
       </div>
     </section>
+  
     {/*faq  */}
 
     <section className="py-16 bg-black">
@@ -857,7 +866,7 @@ const faqs = [
     <BlogListingPage disableSeo />
     {/* contact */}
     <section id="contact" className="bg-neutral-950 py-5 md:px-4 ">
-      <h1 className=" text-2xl text-orange-400 text-center font-semibold py-5">GET IN TOUCH </h1>
+      <h2 className=" text-2xl text-orange-400 text-center font-semibold py-5">GET IN TOUCH </h2>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 bg-white/5 border border-orange-500/15 rounded-xl shadow-md p-6 sm:p-10">
         {/* Contact Form */}
         <div>
@@ -957,7 +966,7 @@ const faqs = [
         </div>
       </div>
     </section>
-      </div>
+      </main>
     </>
   );
 };

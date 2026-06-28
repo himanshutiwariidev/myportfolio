@@ -25,13 +25,16 @@ export const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between px-3 py-3 text-orange-50 md:px-8">
         <div className="flex items-center">
           <Link to="/" onClick={closeMenus}>
-            <img src={logo} alt="Technical Tiwari Ji Logo" className="h-12" />
+            <img src={logo} alt="Himanshhu Tiwari website logo" className="h-12" />
           </Link>
         </div>
 
         <div className="hidden items-center gap-7 md:flex">
           <NavLink to="/" className={navLinkClass}>
             Home
+          </NavLink>
+           <NavLink to="/about-himanshhu-tiwari" className={navLinkClass}>
+           About
           </NavLink>
 
           <div className="relative">
@@ -109,6 +112,9 @@ export const Navbar = () => {
           <div className="grid gap-2">
             <NavLink to="/" onClick={closeMenus} className={navLinkClass}>
               Home
+            </NavLink>
+             <NavLink to="/about-himanshhu-tiwari" onClick={closeMenus} className={navLinkClass}>
+              About
             </NavLink>
 
             <button

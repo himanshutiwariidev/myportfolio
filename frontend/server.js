@@ -109,34 +109,12 @@ async function renderPage(url, res, vite, productionTemplate, productionRender) 
 
   const rendered = await renderApp(cleanUrl)
   const appHtml = typeof rendered === 'string' ? rendered : rendered.appHtml
-  const htmlWithApp = htmlTemplate.replace('<!--ssr-outlet-->', appHtml)
-  const html = typeof rendered === 'string' ? htmlWithApp : injectSeo(htmlWithApp, rendered.seo)
+  const headHtml = typeof rendered === 'string' ? '' : rendered.headHtml || ''
+  const html = htmlTemplate
+    .replace('<!--ssr-outlet-->', appHtml)
+    .replace('<!--ssr-head-->', headHtml)
 
   send(res, 200, html, { 'Content-Type': 'text/html; charset=utf-8' })
-}
-
-function escapeHtml(value = '') {
-  return String(value)
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-}
-
-function injectSeo(html, seo = {}) {
-  const title = escapeHtml(seo.title)
-  const description = escapeHtml(seo.description)
-  const canonical = escapeHtml(seo.canonical)
-
-  return html
-    .replace(/<title>[\s\S]*?<\/title>/i, `<title>${title}</title>`)
-    .replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/?>/i, `<meta name="description" content="${description}" />`)
-    .replace(/<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/i, `<link rel="canonical" href="${canonical}" />`)
-    .replace(/<meta\s+property="og:title"\s+content="[^"]*"\s*\/?>/i, `<meta property="og:title" content="${title}" />`)
-    .replace(/<meta\s+property="og:description"\s+content="[^"]*"\s*\/?>/i, `<meta property="og:description" content="${description}" />`)
-    .replace(/<meta\s+property="og:url"\s+content="[^"]*"\s*\/?>/i, `<meta property="og:url" content="${canonical}" />`)
-    .replace(/<meta\s+name="twitter:title"\s+content="[^"]*"\s*\/?>/i, `<meta name="twitter:title" content="${title}" />`)
-    .replace(/<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/?>/i, `<meta name="twitter:description" content="${description}" />`)
 }
 
 const server = await createAppServer()

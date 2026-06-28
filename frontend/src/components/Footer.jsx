@@ -9,6 +9,7 @@ import {
   FaMapMarkerAlt,
 } from 'react-icons/fa';
 import { services } from '../data/services';
+import { siteConfig } from '../lib/siteConfig';
 
 export default function Footer() {
   return (
@@ -22,6 +23,12 @@ export default function Footer() {
             I specialize in full-stack MERN development, crafting dynamic web applications tailored to your business needs.
             Our expertise ensures seamless integration of MongoDB, Express.js, React, and Node.js for optimal performance.
           </p>
+          <p className="mt-3 leading-relaxed text-orange-100/75">
+            <Link to="/about-himanshhu-tiwari" className="font-semibold text-orange-300 transition hover:text-orange-400">
+              Meet Himanshhu Tiwari
+            </Link>
+            , Full Stack Web Developer.
+          </p>
         </div>
 
         <div>
@@ -32,7 +39,6 @@ export default function Footer() {
             <li><Link to="/" className="transition hover:text-orange-400">Home</Link></li>
             <li><Link to="/blog" className="transition hover:text-orange-400">Blog</Link></li>
             <li><Link to="/contact" className="transition hover:text-orange-400">Contact</Link></li>
-            <li><Link to="/admin/login" className="transition hover:text-orange-400">Admin</Link></li>
           </ul>
         </div>
 
@@ -41,7 +47,7 @@ export default function Footer() {
             Services
           </h3>
           <ul className="mt-2 space-y-2">
-            {services.slice(0, 4).map((service) => (
+            {services.map((service) => (
               <li key={service.slug}>
                 <Link to={`/services/${service.slug}`} className="transition hover:text-orange-400">
                   {service.shortTitle}
@@ -61,7 +67,7 @@ export default function Footer() {
           </div>
           <div className="mt-3 flex items-center gap-2 text-orange-100/75">
             <FaEnvelope className="text-orange-400" />
-            <p>Himanshhu.tiwarii.dev@gmail.com</p>
+            <p>{siteConfig.email}</p>
           </div>
           <div className="mt-4 flex gap-4 text-lg text-orange-400">
             <FaFacebookF className="cursor-pointer transition hover:text-orange-200" />

@@ -1,10 +1,16 @@
 import React from 'react';
 import { FaSadTear, FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { SeoHead } from './seo/SeoHead';
 
 export default function NotFound() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-100 to-white px-6 py-12">
+    <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-100 to-white px-6 py-12">
+      <SeoHead
+        title="Page Not Found | Himanshhu Tiwari"
+        description="The page you're looking for doesn't exist or has been moved."
+        robots="noindex, follow"
+      />
       <div className="text-center animate-fade-in-up">
         <div className="mb-4 flex justify-center">
           <FaSadTear className="text-6xl text-cyan-500 animate-bounce" />
@@ -18,6 +24,6 @@ export default function NotFound() {
           <FaArrowLeft /> Go Back Home
         </Link>
       </div>
-    </div>
+    </main>
   );
 }

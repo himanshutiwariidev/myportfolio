@@ -2,19 +2,9 @@ import React, { useEffect, useMemo, useState } from 'react';
 import DOMPurify from 'dompurify';
 import { Link, useParams } from 'react-router-dom';
 import api from '../../lib/api';
-import { useSeo } from '../../hooks/useSeo';
-
-const getSiteUrl = () => {
-  if (import.meta.env.VITE_SITE_URL) {
-    return import.meta.env.VITE_SITE_URL.replace(/\/$/, '');
-  }
-
-  if (typeof window !== 'undefined') {
-    return window.location.origin;
-  }
-
-  return 'https://technicaltiwariji.com';
-};
+import { SeoHead } from '../../components/seo/SeoHead';
+import { siteUrl } from '../../lib/siteConfig';
+import { blogPostingSchema, breadcrumbSchema } from '../../lib/schema';
 
 const getImageUrl = (image) => {
   if (!image) {
@@ -50,12 +40,7 @@ export const BlogSinglePage = () => {
     fetchBlog();
   }, [slug]);
 
-  useSeo({
-    title: blog?.metaTitle || blog?.title || 'Blog | TechnicalTiwarii',
-    description:
-      blog?.metaDescription || blog?.shortDescription || 'Read the full blog article on TechnicalTiwarii.',
-    canonical: blog?.slug ? `${getSiteUrl()}/blog/${blog.slug}` : undefined,
-  });
+  const canonical = blog?.slug ? `${siteUrl}/blog/${blog.slug}` : `${siteUrl}/blog`;
 
   const safeHtml = useMemo(() => {
     const content = blog?.content || '';
@@ -63,12 +48,18 @@ export const BlogSinglePage = () => {
   }, [blog?.content]);
 
   if (loading) {
-    return <section className="min-h-screen px-4 py-16 text-orange-100">Loading blog...</section>;
+    return (
+      <section className="min-h-screen px-4 py-16 text-orange-100">
+        <SeoHead title="Loading blog... | Himanshhu Tiwari" canonical={canonical} />
+        Loading blog...
+      </section>
+    );
   }
 
   if (error) {
     return (
       <section className="min-h-screen px-4 py-16">
+        <SeoHead title="Blog Not Found | Himanshhu Tiwari" robots="noindex, follow" />
         <div className="mx-auto max-w-4xl rounded-3xl border border-red-500/30 bg-red-500/10 p-6 text-red-200">
           {error}
         </div>
@@ -78,6 +69,21 @@ export const BlogSinglePage = () => {
 
   return (
     <article className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(249,115,22,0.14),_transparent_30%),linear-gradient(180deg,_#060606_0%,_#111111_100%)] px-4 py-16 md:px-8">
+      <SeoHead
+        title={blog.metaTitle || blog.title}
+        description={blog.metaDescription || blog.shortDescription || `Read ${blog.title} on the Himanshhu Tiwari blog.`}
+        canonical={canonical}
+        ogType="article"
+        ogImage={blog.image ? getImageUrl(blog.image) : undefined}
+        jsonLd={[
+          blogPostingSchema(blog, canonical),
+          breadcrumbSchema([
+            { name: 'Home', url: `${siteUrl}/` },
+            { name: 'Blog', url: `${siteUrl}/blog` },
+            { name: blog.title, url: canonical },
+          ]),
+        ]}
+      />
       <div className="mx-auto max-w-4xl space-y-8">
         <Link to="/blog" className="inline-flex text-sm font-medium text-orange-300 transition hover:text-orange-200">
           Back to all blogs

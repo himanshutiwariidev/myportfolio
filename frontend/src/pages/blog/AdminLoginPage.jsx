@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import api, { clearAdminToken, saveAdminToken } from '../../lib/api';
-import { useSeo } from '../../hooks/useSeo';
+import { SeoHead } from '../../components/seo/SeoHead';
 
 export const AdminLoginPage = () => {
   const navigate = useNavigate();
@@ -12,11 +12,6 @@ export const AdminLoginPage = () => {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-
-  useSeo({
-    title: 'Admin Login | TechnicalTiwarii',
-    description: 'Login to the blog admin panel using your admin ID and password.',
-  });
 
   const redirectPath = location.state?.from || '/admin/blogs';
 
@@ -44,6 +39,7 @@ export const AdminLoginPage = () => {
 
   return (
     <section className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(251,146,60,0.18),_transparent_28%),linear-gradient(180deg,_#050505_0%,_#131313_100%)] px-4 py-16 md:px-8">
+      <SeoHead title="Admin Login | Himanshhu Tiwari" robots="noindex, nofollow" />
       <div className="mx-auto max-w-xl space-y-8">
         <div className="space-y-4 text-center">
           <p className="text-sm uppercase tracking-[0.35em] text-orange-300">Admin Access</p>

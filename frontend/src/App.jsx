@@ -12,15 +12,26 @@ import { AdminLoginPage } from './pages/blog/AdminLoginPage';
 import { ProtectedAdminRoute } from './components/blog/ProtectedAdminRoute';
 import { ServiceDetailPage } from './pages/ServiceDetailPage';
 import { ContactPage } from './pages/ContactPage';
+import { AboutFounderPage } from './pages/AboutFounderPage';
+import { SeoHead } from './components/seo/SeoHead';
+import { siteUrl } from './lib/siteConfig';
+import { personSchema, websiteSchema } from './lib/schema';
 
 export const App = () => {
   return (
     <>
+      <SeoHead
+        title="Himanshhu Tiwari | Best Website Development Company in India | CRM & Ecommerce Developer"
+        description="Himanshhu Tiwari delivers company-grade website development, ecommerce, Shopify, CRM, School ERP, and Android app development services for businesses and startups across India."
+        canonical={`${siteUrl}/`}
+        jsonLd={[personSchema(), websiteSchema()]}
+      />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services/:slug" element={<ServiceDetailPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/about-himanshhu-tiwari" element={<AboutFounderPage />} />
         <Route path="/blog" element={<BlogListingPage />} />
         <Route path="/blog/:slug" element={<BlogSinglePage />} />
         <Route path="/admin/login" element={<AdminLoginPage />} />

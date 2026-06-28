@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { BlogForm } from '../../components/blog/BlogForm';
 import api, { getAdminHeaders } from '../../lib/api';
-import { useSeo } from '../../hooks/useSeo';
+import { SeoHead } from '../../components/seo/SeoHead';
 
 const initialFormState = {
   title: '',
@@ -37,11 +37,6 @@ export const AdminBlogFormPage = () => {
   const [loading, setLoading] = useState(isEditing);
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState('');
-
-  useSeo({
-    title: isEditing ? 'Edit Blog | TechnicalTiwarii' : 'Create Blog | TechnicalTiwarii',
-    description: isEditing ? 'Edit an existing blog article.' : 'Create a new blog article with rich content.',
-  });
 
   useEffect(() => {
     if (!isEditing) {
@@ -155,6 +150,10 @@ export const AdminBlogFormPage = () => {
 
   return (
     <section className="min-h-screen bg-[linear-gradient(180deg,_#080808_0%,_#141414_100%)] px-4 py-16 md:px-8">
+      <SeoHead
+        title={isEditing ? 'Edit Blog | Himanshhu Tiwari' : 'Create Blog | Himanshhu Tiwari'}
+        robots="noindex, nofollow"
+      />
       <div className="mx-auto max-w-5xl space-y-8">
         <div className="space-y-4">
           <Link to="/admin/blogs" className="inline-flex text-sm font-medium text-orange-300 transition hover:text-orange-200">
