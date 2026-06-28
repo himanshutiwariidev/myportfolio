@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import 'react-quill/dist/quill.snow.css';
-
+import 'react-quill-new/dist/quill.snow.css';
 const slugify = (value = '') =>
   value
     .toLowerCase()
@@ -33,7 +32,7 @@ export const BlogForm = ({
         return;
       }
 
-      const quillModule = await import('react-quill');
+      const quillModule = await import('react-quill-new');
 
       if (isMounted) {
         setReactQuillComponent(() => quillModule.default);
