@@ -273,7 +273,7 @@ const faqs = [
     <>
     <main className="bg-neutral-950 text-orange-50 overflow-x-hidden">
     <SeoHead
-      title="Himanshhu Tiwari | Best Website Development Company in India | CRM, Ecommerce & Android App Developer"
+      title="Himanshhu Tiwari | Best Website Developer in India | CRM, Ecommerce & Android App Developer"
       description="Affordable, custom website development, ecommerce, CRM, School ERP, and Android app development services for startups and small businesses across India. Explore live projects and start your build."
       canonical={`${siteUrl}/`}
       jsonLd={[faqPageSchema(faqs), portfolioSchema(projects)]}

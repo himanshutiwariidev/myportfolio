@@ -14,13 +14,13 @@ export const services = [
     title: 'Custom Website Development',
     shortTitle: 'Web Development',
     description:
-      'Tailored website solutions with responsive design, fast load speeds, and scalable architecture — built by a top-rated website development company in India for startups and small businesses.',
+      'Tailored website solutions with responsive design, fast load speeds, and scalable architecture — built by a top-rated website developer in India for startups and small businesses.',
     icon: FaCode,
     color: 'text-sky-400',
     accent: 'from-sky-400 via-orange-500 to-amber-300',
-    seoTitle: 'Best Website Development Company in India | Affordable Custom Websites',
+    seoTitle: 'Best Website Developer in India | Affordable Custom Websites',
     seoDescription:
-      'Looking for the best website development company in India? Get an affordable, custom-built, SEO-friendly business website for your startup or small business, built and managed by Himanshhu Tiwari.',
+      'Looking for the best website developer in India? Get an affordable, custom-built, SEO-friendly business website for your startup or small business, built and managed by Himanshhu Tiwari.',
     headline: 'Affordable Website Development for Startups and Small Businesses in India',
     intro:
       'A website should do more than look good — it should load fast, rank well, and turn visitors into customers. As an independent website developer in India delivering company-grade quality, I design and build custom websites for startups, small businesses, and growing brands that need a reliable digital foundation without enterprise agency pricing or overhead.',
@@ -94,14 +94,14 @@ export const services = [
     title: 'Mobile App Development',
     shortTitle: 'Mobile Apps',
     description:
-      'Android app development company services in India — cross-platform mobile apps with smooth interfaces, reliable performance, and scalable architecture.',
+      'Android app development services in India — cross-platform mobile apps with smooth interfaces, reliable performance, and scalable architecture.',
     icon: FaMobileAlt,
     color: 'text-pink-400',
     accent: 'from-pink-400 via-orange-500 to-amber-300',
-    seoTitle: 'Android App Development Company in India | Mobile App Developer',
+    seoTitle: 'Android App Developer in India | Mobile App Developer',
     seoDescription:
-      'Android app development company services in India for startups and businesses. Build cross-platform mobile apps with clean UI, scalable APIs, secure authentication, and Play Store-ready builds.',
-    headline: 'Android App Development Company in India for Modern, Reliable Mobile Products',
+      'Android app development  services in India for startups and businesses. Build cross-platform mobile apps with clean UI, scalable APIs, secure authentication, and Play Store-ready builds.',
+    headline: 'Android App Developer in India for Modern, Reliable Mobile Products',
     intro:
       'I design and build Android-first, cross-platform mobile apps that help Indian businesses serve customers, manage operations, and launch digital products with a smooth experience across devices — from the first screen to Play Store deployment.',
     highlights: [
@@ -169,14 +169,14 @@ export const services = [
     title: 'E-commerce Solutions',
     shortTitle: 'E-commerce',
     description:
-      'Ecommerce website development company services including custom online stores and Shopify store development, with inventory management, payment integration, and analytics.',
+      'Ecommerce website development  services including custom online stores and Shopify store development, with inventory management, payment integration, and analytics.',
     icon: FaShoppingCart,
     color: 'text-emerald-400',
     accent: 'from-emerald-400 via-orange-500 to-amber-300',
-    seoTitle: 'Ecommerce Website Development Company | Shopify Store Development Services',
+    seoTitle: 'Ecommerce Website Development Services | Shopify Store Development Services',
     seoDescription:
-      'Ecommerce website development company offering custom online stores and Shopify store development services — product catalog, cart, checkout, payments, inventory, and SEO-ready product pages.',
-    headline: 'Ecommerce Website Development Company for Custom Stores and Shopify',
+      'Ecommerce website developer offering custom online stores and Shopify store development services — product catalog, cart, checkout, payments, inventory, and SEO-ready product pages.',
+    headline: 'Ecommerce Website Development Services for Custom Stores and Shopify',
     intro:
       'I build ecommerce websites that make products easy to browse, trust easy to build, and checkout simple for customers — either as a fully custom MERN-stack store or as a Shopify store development project, depending on what fits your catalog size, budget, and growth plan.',
     highlights: [
@@ -342,9 +342,9 @@ export const services = [
     icon: FaCogs,
     color: 'text-violet-400',
     accent: 'from-violet-400 via-orange-500 to-amber-300',
-    seoTitle: 'Custom CRM Software Development Company | School ERP & Website Development',
+    seoTitle: 'Custom CRM Software Development Services | School ERP & Website Development',
     seoDescription:
-      'Custom CRM software development company building business management CRM systems, and School ERP & website development for institutions — leads, customers, students, fees, and operations in one dashboard.',
+      'Custom CRM software developer building business management CRM systems, and School ERP & website development for institutions — leads, customers, students, fees, and operations in one dashboard.',
     headline: 'Custom CRM Software Development and School ERP Systems Built Around Your Workflow',
     intro:
       'I build practical, custom CRM software and School ERP systems that help teams manage leads, customers, students, orders, tasks, reporting, and daily operations from one organized dashboard — instead of forcing your business into a generic, one-size-fits-all CRM template.',
