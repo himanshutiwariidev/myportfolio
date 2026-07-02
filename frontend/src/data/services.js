@@ -20,7 +20,7 @@ export const services = [
     accent: 'from-sky-400 via-orange-500 to-amber-300',
     seoTitle: 'Best Website Developer in India | Affordable Custom Websites',
     seoDescription:
-      'Looking for the best website developer in India? Get an affordable, custom-built, SEO-friendly business website for your startup or small business, built and managed by Himanshhu Tiwari.',
+      'Looking for the best website developer in India? Get an affordable, custom-built, SEO-friendly business website for your startup or small business, built and managed by himanshu Tiwari.',
     headline: 'Affordable Website Development for Startups and Small Businesses in India',
     intro:
       'A website should do more than look good — it should load fast, rank well, and turn visitors into customers. As an independent website developer in India delivering company-grade quality, I design and build custom websites for startups, small businesses, and growing brands that need a reliable digital foundation without enterprise agency pricing or overhead.',
@@ -274,7 +274,7 @@ export const services = [
     icon: FaTools,
     color: 'text-amber-400',
     accent: 'from-amber-300 via-orange-500 to-yellow-400',
-    seoTitle: 'Website Maintenance Services in India | Himanshhu Tiwari',
+    seoTitle: 'Website Maintenance Services in India | himanshu Tiwari',
     seoDescription:
       'Keep your website secure, updated, fast, and reliable with professional website maintenance services — backups, bug fixes, performance tuning, and feature support.',
     headline: 'Website Maintenance Services to Keep Your Site Secure, Updated, and Fast',
@@ -434,7 +434,7 @@ export const services = [
     icon: FaSearch,
     color: 'text-cyan-400',
     accent: 'from-cyan-400 via-orange-500 to-amber-300',
-    seoTitle: 'SEO Services for Business Websites in India | Himanshhu Tiwari',
+    seoTitle: 'SEO Services for Business Websites in India | himanshu Tiwari',
     seoDescription:
       'Improve website visibility in Google, Bing, and AI search assistants with technical SEO, on-page optimization, metadata, structured data, site structure, performance, and content recommendations.',
     headline: 'SEO Services That Make Your Website Easier to Find and Easier to Trust',

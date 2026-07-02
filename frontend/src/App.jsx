@@ -21,8 +21,8 @@ export const App = () => {
   return (
     <>
       <SeoHead
-        title="Himanshhu Tiwari | Best Website Developer in India | CRM & Ecommerce Developer"
-        description="Himanshhu Tiwari delivers company-grade website development, ecommerce, Shopify, CRM, School ERP, and Android app development services for businesses and startups across India."
+        title="himanshu Tiwari | Best Website Developer in India | CRM & Ecommerce Developer"
+        description="himanshu Tiwari delivers company-grade website development, ecommerce, Shopify, CRM, School ERP, and Android app development services for businesses and startups across India."
         canonical={`${siteUrl}/`}
         jsonLd={[personSchema(), websiteSchema()]}
       />
@@ -31,7 +31,7 @@ export const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/services/:slug" element={<ServiceDetailPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/about-himanshhu-tiwari" element={<AboutFounderPage />} />
+        <Route path="/about-himanshu-tiwari" element={<AboutFounderPage />} />
         <Route path="/blog" element={<BlogListingPage />} />
         <Route path="/blog/:slug" element={<BlogSinglePage />} />
         <Route path="/admin/login" element={<AdminLoginPage />} />

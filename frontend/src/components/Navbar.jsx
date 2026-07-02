@@ -25,7 +25,7 @@ export const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between px-3 py-3 text-orange-50 md:px-8">
         <div className="flex items-center">
           <Link to="/" onClick={closeMenus}>
-            <img src={logo} alt="Himanshhu Tiwari website logo" className="h-12" />
+            <img src={logo} alt="himanshu Tiwari website logo" className="h-12" />
           </Link>
         </div>
 
@@ -33,7 +33,7 @@ export const Navbar = () => {
           <NavLink to="/" className={navLinkClass}>
             Home
           </NavLink>
-           <NavLink to="/about-himanshhu-tiwari" className={navLinkClass}>
+           <NavLink to="/about-himanshu-tiwari" className={navLinkClass}>
            About
           </NavLink>
 
@@ -113,7 +113,7 @@ export const Navbar = () => {
             <NavLink to="/" onClick={closeMenus} className={navLinkClass}>
               Home
             </NavLink>
-             <NavLink to="/about-himanshhu-tiwari" onClick={closeMenus} className={navLinkClass}>
+             <NavLink to="/about-himanshu-tiwari" onClick={closeMenus} className={navLinkClass}>
               About
             </NavLink>
 

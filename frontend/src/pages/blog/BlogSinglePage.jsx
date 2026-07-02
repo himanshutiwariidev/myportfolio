@@ -50,7 +50,7 @@ export const BlogSinglePage = () => {
   if (loading) {
     return (
       <section className="min-h-screen px-4 py-16 text-orange-100">
-        <SeoHead title="Loading blog... | Himanshhu Tiwari" canonical={canonical} />
+        <SeoHead title="Loading blog... | himanshu Tiwari" canonical={canonical} />
         Loading blog...
       </section>
     );
@@ -59,7 +59,7 @@ export const BlogSinglePage = () => {
   if (error) {
     return (
       <section className="min-h-screen px-4 py-16">
-        <SeoHead title="Blog Not Found | Himanshhu Tiwari" robots="noindex, follow" />
+        <SeoHead title="Blog Not Found | himanshu Tiwari" robots="noindex, follow" />
         <div className="mx-auto max-w-4xl rounded-3xl border border-red-500/30 bg-red-500/10 p-6 text-red-200">
           {error}
         </div>
@@ -71,7 +71,7 @@ export const BlogSinglePage = () => {
     <article className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(249,115,22,0.14),_transparent_30%),linear-gradient(180deg,_#060606_0%,_#111111_100%)] px-4 py-16 md:px-8">
       <SeoHead
         title={blog.metaTitle || blog.title}
-        description={blog.metaDescription || blog.shortDescription || `Read ${blog.title} on the Himanshhu Tiwari blog.`}
+        description={blog.metaDescription || blog.shortDescription || `Read ${blog.title} on the himanshu Tiwari blog.`}
         canonical={canonical}
         ogType="article"
         ogImage={blog.image ? getImageUrl(blog.image) : undefined}

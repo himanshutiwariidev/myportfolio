@@ -31,12 +31,12 @@ export const BlogListingPage = ({ disableSeo = false }) => {
     <section className=" bg-[radial-gradient(circle_at_top,_rgba(251,146,60,0.16),_transparent_30%),linear-gradient(180deg,_#050505_0%,_#121212_100%)] px-4 py-16 md:px-8">
       {disableSeo ? null : (
         <SeoHead
-          title="Web Development, CRM & Ecommerce Blog | Himanshhu Tiwari"
-          description="Articles, tutorials, and insights on website development, ecommerce, CRM, School ERP, and Android app development from Himanshhu Tiwari."
+          title="Web Development, CRM & Ecommerce Blog | himanshu Tiwari"
+          description="Articles, tutorials, and insights on website development, ecommerce, CRM, School ERP, and Android app development from himanshu Tiwari."
           canonical={canonical}
           jsonLd={[
             collectionPageSchema({
-              name: 'Himanshhu Tiwari Blog',
+              name: 'himanshu Tiwari Blog',
               description: 'Articles and tutorials on website development, ecommerce, CRM, and app development.',
               url: canonical,
             }),

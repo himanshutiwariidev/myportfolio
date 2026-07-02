@@ -38,8 +38,8 @@ export const ContactPage = () => {
   return (
     <main className="bg-neutral-950 text-orange-50">
       <SeoHead
-        title="Contact Himanshhu Tiwari | Website, CRM & App Development Enquiries"
-        description="Contact Himanshhu Tiwari for website development, ecommerce, Shopify, CRM, School ERP, Android app, maintenance, and SEO projects across India."
+        title="Contact himanshu Tiwari | Website, CRM & App Development Enquiries"
+        description="Contact himanshu Tiwari for website development, ecommerce, Shopify, CRM, School ERP, Android app, maintenance, and SEO projects across India."
         canonical={canonical}
         jsonLd={[
           contactPageSchema(canonical),
@@ -159,8 +159,8 @@ export const ContactPage = () => {
             <div className="rounded-3xl border border-orange-500/15 bg-white/5 p-6 md:p-8">
               <h2 className="text-2xl font-bold text-white">Contact Details</h2>
               <p className="mt-2 text-sm text-orange-100/60">
-                <Link to="/about-himanshhu-tiwari" className="text-orange-300 underline-offset-2 hover:underline">
-                  About Himanshhu Tiwari
+                <Link to="/about-himanshu-tiwari" className="text-orange-300 underline-offset-2 hover:underline">
+                  About himanshu Tiwari
                 </Link>
                 , Full Stack Web Developer.
               </p>

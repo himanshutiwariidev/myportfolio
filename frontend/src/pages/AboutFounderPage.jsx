@@ -18,8 +18,8 @@ export const AboutFounderPage = () => {
   return (
     <main className="bg-neutral-950 text-orange-50">
       <SeoHead
-        title="Himanshhu Tiwari | Full Stack Web Developer"
-        description="Meet Himanshhu Tiwari, a Full Stack Web Developer specializing in website development, ecommerce, CRM, School ERP, and Android app development across India."
+        title="himanshu Tiwari | Full Stack Web Developer"
+        description="Meet himanshu Tiwari, a Full Stack Web Developer specializing in website development, ecommerce, CRM, School ERP, and Android app development across India."
         canonical={canonical}
         ogType="profile"
         jsonLd={[
@@ -27,11 +27,11 @@ export const AboutFounderPage = () => {
           profilePageSchema(),
           breadcrumbSchema([
             { name: 'Home', url: `${siteUrl}/` },
-            { name: 'About Himanshhu Tiwari', url: canonical },
+            { name: 'About himanshu Tiwari', url: canonical },
           ]),
           imageObjectSchema({
             url: siteConfig.profileImage,
-            caption: 'Himanshhu Tiwari - Full Stack Website Developer',
+            caption: 'himanshu Tiwari - Full Stack Website Developer',
           }),
         ]}
       />
@@ -46,7 +46,7 @@ export const AboutFounderPage = () => {
             <ol className="flex items-center gap-2">
               <li><Link to="/" className="hover:text-orange-300">Home</Link></li>
               <li aria-hidden="true">/</li>
-              <li className="text-orange-300" aria-current="page">About Himanshhu Tiwari</li>
+              <li className="text-orange-300" aria-current="page">About himanshu Tiwari</li>
             </ol>
           </nav>
 
@@ -55,10 +55,10 @@ export const AboutFounderPage = () => {
               Full Stack Web Developer
             </p>
             <h1 className="mt-5 text-2xl font-semibold  md:font-bold md:leading-tight text-white md:text-5xl">
-              Himanshhu Tiwari — Full Stack Web Developer
+              himanshu Tiwari — Full Stack Web Developer
             </h1>
             <p className="mt-3 md:mt-5 text-sm md:leading-8 text-orange-100/75 md:text-lg">
-              Himanshhu Tiwari is a Full Stack Web Developer specializing in Website Development,
+              himanshu Tiwari is a Full Stack Web Developer specializing in Website Development,
               Ecommerce Solutions, Custom CRM Software, School ERP Systems, Android Applications, and
               Custom Web Applications. He helps startups, businesses, educational institutions, and
               organizations build fast, scalable, and modern digital solutions, leading every project
@@ -156,7 +156,7 @@ export const AboutFounderPage = () => {
         <div className="mx-auto max-w-7xl">
           <h2 className="text-2xl font-bold text-white">Portfolio &amp; Client Work</h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-orange-100/70">
-            Live projects built by Himanshhu Tiwari across insurance, healthcare, real estate, transport,
+            Live projects built by himanshu Tiwari across insurance, healthcare, real estate, transport,
             and enterprise clients are showcased on the{' '}
             <Link to="/#projects" className="text-orange-300 underline-offset-2 hover:underline">
               homepage portfolio section
@@ -169,7 +169,7 @@ export const AboutFounderPage = () => {
         <div className="mx-auto grid max-w-7xl gap-8 rounded-3xl border border-orange-500/15 bg-neutral-950 p-6 md:grid-cols-[1fr_0.8fr] md:p-8">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-orange-300">Get In Touch</p>
-            <h2 className="mt-3 text-xl font-bold text-white md:text-4xl">Work with Himanshhu Tiwari</h2>
+            <h2 className="mt-3 text-xl font-bold text-white md:text-4xl">Work with himanshu Tiwari</h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-orange-100/70">
               Reach out directly to discuss a website, ecommerce, CRM, School ERP, or Android app project.
             </p>
@@ -177,7 +177,7 @@ export const AboutFounderPage = () => {
               to="/contact"
               className="mt-5 inline-flex items-center justify-center rounded-md bg-gradient-to-r from-orange-500 to-amber-400 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-950/40 transition hover:-translate-y-0.5"
             >
-              Contact Himanshhu Tiwari
+              Contact himanshu Tiwari
             </Link>
           </div>
           <div className="grid content-center gap-3">

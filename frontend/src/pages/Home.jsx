@@ -23,7 +23,7 @@ import { faqPageSchema, portfolioSchema } from "../lib/schema";
 export const Home = () => {
 
   const PROJECTS_VISIBLE_COUNT = 6;
-  const words = ["Himanshhu Tiwari", "A Web Developer"];
+  const words = ["himanshu Tiwari", "A Web Developer"];
   const colors = ["text-orange-400", "text-amber-300"];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
@@ -32,7 +32,7 @@ export const Home = () => {
   const currentColor = colors[currentIndex];
   const socialLinks = [
     { href: "https://www.facebook.com/profile.php?id=100026762781780", icon: <FaFacebookF /> },
-    { href: "https://www.instagram.com/himanshhutiwari09?igsh=dTRyaDdubThndjI2", icon: <FaInstagram /> },
+    { href: "https://www.instagram.com/himanshutiwari09?igsh=dTRyaDdubThndjI2", icon: <FaInstagram /> },
     { href: "https://x.com/Tiwariji0121", icon: <FaTwitter /> },
     { href: "https://www.linkedin.com/in/himanshutiwarii221", icon: <FaLinkedin /> },
   ];
@@ -273,7 +273,7 @@ const faqs = [
     <>
     <main className="bg-neutral-950 text-orange-50 overflow-x-hidden">
     <SeoHead
-      title="Himanshhu Tiwari | Best Website Developer in India | CRM, Ecommerce & Android App Developer"
+      title="himanshu Tiwari | Best Website Developer in India | CRM, Ecommerce & Android App Developer"
       description="Affordable, custom website development, ecommerce, CRM, School ERP, and Android app development services for startups and small businesses across India. Explore live projects and start your build."
       canonical={`${siteUrl}/`}
       jsonLd={[faqPageSchema(faqs), portfolioSchema(projects)]}
@@ -576,8 +576,8 @@ const faqs = [
 	              With a strong foundation in both front-end and back-end development, I build websites and web applications that balance visual appeal, usability, and real business value. From <Link to="/services/custom-website-development" className="text-orange-300 underline-offset-2 hover:underline">custom website development</Link> for startups to <Link to="/services/ecommerce-solutions" className="text-orange-300 underline-offset-2 hover:underline">ecommerce and Shopify store development</Link>, every project is built to be modern, reliable, and ready to grow.
 	            </p>
 	            <p className="mt-3 text-sm leading-7 text-orange-100/70 md:text-base">
-	              <Link to="/about-himanshhu-tiwari" className="text-orange-300 underline-offset-2 hover:underline">
-	                About Himanshhu Tiwari
+	              <Link to="/about-himanshu-tiwari" className="text-orange-300 underline-offset-2 hover:underline">
+	                About himanshu Tiwari
 	              </Link>
 	              , Full Stack Web Developer.
 	            </p>
@@ -775,7 +775,7 @@ const faqs = [
               <div className="relative aspect-[16/8] overflow-hidden  border border-orange-500/15 ">
                 <img
                   src={project.image}
-                  alt={`${project.title} - ${project.category} website built by Himanshhu Tiwari`}
+                  alt={`${project.title} - ${project.category} website built by himanshu Tiwari`}
                   className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
@@ -930,7 +930,7 @@ const faqs = [
             <div>
             <p>
               
-              Himanshhu.tiwarii.dev@gmail.com
+              himanshu.tiwarii.dev@gmail.com
             </p>
           </div>
           <div className="flex items-center gap-3 my-2">

@@ -7,7 +7,7 @@ export default function NotFound() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-100 to-white px-6 py-12">
       <SeoHead
-        title="Page Not Found | Himanshhu Tiwari"
+        title="Page Not Found | himanshu Tiwari"
         description="The page you're looking for doesn't exist or has been moved."
         robots="noindex, follow"
       />

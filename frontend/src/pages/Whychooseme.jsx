@@ -60,7 +60,7 @@ export default function WhyChooseme() {
               <div className="relative overflow-hidden rounded-[28px] border border-orange-500/20 bg-neutral-950 p-3">
                 <img
                   src={profileImage}
-                  alt="Himanshhu Tiwari"
+                  alt="himanshu Tiwari"
                   className="relative h-full min-h-[320px] w-full rounded-[22px] object-cover"
                 />
               </div>

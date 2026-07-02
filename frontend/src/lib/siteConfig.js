@@ -1,7 +1,7 @@
 export const siteUrl = (import.meta.env.VITE_SITE_URL || 'https://technicaltiwariji.com').replace(/\/$/, '');
 
 export const siteConfig = {
-  name: 'Himanshhu Tiwari',
+  name: 'himanshu Tiwari',
   jobTitle: 'Full Stack Web Developer',
   email: 'technicaltiwariji01@gmail.com',
   phone: '+91 7633093222',
@@ -16,7 +16,7 @@ export const siteConfig = {
   areaServed: ['India', 'United States', 'Worldwide'],
   sameAs: [
     'https://www.facebook.com/profile.php?id=100026762781780',
-    'https://www.instagram.com/himanshhutiwari09',
+    'https://www.instagram.com/himanshutiwari09',
     'https://x.com/Tiwariji0121',
     'https://www.linkedin.com/in/himanshutiwarii221',
     'https://github.com/himanshutiwariidev',
@@ -36,6 +36,6 @@ export const siteConfig = {
   ],
   // Dedicated profile photo (distinct from the site logo above), used for
   // Person entity recognition (Knowledge Graph / Google Search entity card).
-  profileImage: `${siteUrl}/himanshhu-tiwari-profile-photo.jpg`,
-  authorPageUrl: `${siteUrl}/about-himanshhu-tiwari`,
+  profileImage: `${siteUrl}/himanshu-tiwari-profile-photo.jpg`,
+  authorPageUrl: `${siteUrl}/about-himanshu-tiwari`,
 };

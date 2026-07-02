@@ -18,7 +18,7 @@ export const ServiceDetailPage = () => {
     return (
       <>
         <SeoHead
-          title="Service Not Found | Himanshhu Tiwari"
+          title="Service Not Found | himanshu Tiwari"
           description="The requested service page could not be found."
           canonical={`${siteUrl}/services/${slug || ''}`}
           robots="noindex, follow"

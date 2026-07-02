@@ -39,7 +39,7 @@ export const AdminLoginPage = () => {
 
   return (
     <section className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(251,146,60,0.18),_transparent_28%),linear-gradient(180deg,_#050505_0%,_#131313_100%)] px-4 py-16 md:px-8">
-      <SeoHead title="Admin Login | Himanshhu Tiwari" robots="noindex, nofollow" />
+      <SeoHead title="Admin Login | himanshu Tiwari" robots="noindex, nofollow" />
       <div className="mx-auto max-w-xl space-y-8">
         <div className="space-y-4 text-center">
           <p className="text-sm uppercase tracking-[0.35em] text-orange-300">Admin Access</p>

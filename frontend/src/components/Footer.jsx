@@ -24,8 +24,8 @@ export default function Footer() {
             Our expertise ensures seamless integration of MongoDB, Express.js, React, and Node.js for optimal performance.
           </p>
           <p className="mt-3 leading-relaxed text-orange-100/75">
-            <Link to="/about-himanshhu-tiwari" className="font-semibold text-orange-300 transition hover:text-orange-400">
-              Meet Himanshhu Tiwari
+            <Link to="/about-himanshu-tiwari" className="font-semibold text-orange-300 transition hover:text-orange-400">
+              Meet himanshu Tiwari
             </Link>
             , Full Stack Web Developer.
           </p>

@@ -151,7 +151,7 @@ export const AdminBlogFormPage = () => {
   return (
     <section className="min-h-screen bg-[linear-gradient(180deg,_#080808_0%,_#141414_100%)] px-4 py-16 md:px-8">
       <SeoHead
-        title={isEditing ? 'Edit Blog | Himanshhu Tiwari' : 'Create Blog | Himanshhu Tiwari'}
+        title={isEditing ? 'Edit Blog | himanshu Tiwari' : 'Create Blog | himanshu Tiwari'}
         robots="noindex, nofollow"
       />
       <div className="mx-auto max-w-5xl space-y-8">
