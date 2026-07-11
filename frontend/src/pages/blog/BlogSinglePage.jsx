@@ -103,7 +103,7 @@ export const BlogSinglePage = () => {
           <img
             src={getImageUrl(blog.image)}
             alt={blog.imageAlt || blog.title}
-            className="h-[420px] w-full rounded-[2rem] object-cover shadow-xl shadow-orange-950/30"
+            className="h-[420px] w-full rounded-[2rem] object-contain shadow-xl shadow-orange-950/30"
           />
         ) : null}
 
