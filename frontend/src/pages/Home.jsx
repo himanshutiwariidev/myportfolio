@@ -5,14 +5,16 @@ import { FaUsers, FaCode, FaProjectDiagram, FaLaptopCode,FaChevronDown, FaChevro
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaLinkedin, FaPaperPlane,
 } from 'react-icons/fa';
 import { Link } from "react-router-dom";
-import projectImage1 from "../assets/keytel-design-studio-website-preview.png";
-import projectImage2 from "../assets/policy-bima-karalo-insurance-website-preview.png";
-import projectImage3 from "../assets/shri-balaji-enterprise-website-preview.png";
-import projectImage4 from "../assets/medishipper-healthcare-logistics-website-preview.png";
-import projectImage5 from "../assets/rsb-medicare-website-preview.png";
-import projectImage6 from "../assets/taxi-tribe-transport-website-preview.png";
-import projectImage7 from "../assets/cutlery-web-app-product-showcase-preview.png";
-import projectImagemyriss from "../assets/myriss.png"
+import projectImage1 from "../assets/keytel-design-studio-website-preview.webp";
+import projectImage2 from "../assets/policy-bima-karalo-insurance-website-preview.webp";
+import projectImage3 from "../assets/shri-balaji-enterprise-website-preview.webp";
+import projectImage4 from "../assets/medishipper-healthcare-logistics-website-preview.webp";
+import projectImage5 from "../assets/rsb-medicare-website-preview.webp";
+import projectImage6 from "../assets/taxi-tribe-transport-website-preview.webp";
+import projectImage7 from "../assets/cutlery-web-app-product-showcase-preview.webp";
+import projectImagemyriss from "../assets/myriss.webp";
+import projectImageYoungWheel from "../assets/youngwheel-transport-vehicle-website-preview.webp";
+import projectImageApex from "../assets/apexmachinery-technology-website-preview.webp";
 import ToolsOrbit from "./Toolorbit";
 import { BlogListingPage } from "./blog/BlogListingPage";
 import { services } from "../data/services";
@@ -140,6 +142,24 @@ const projects = [
     'A modern fashion ecommerce store for men, women, and kids — built for smooth and a confident shopping experience.',
 },
   
+  {
+    title: 'Young Wheel',
+    url: 'https://www.youngwheel.com/',
+    image: projectImageYoungWheel,
+    domain: 'youngwheel.com',
+    category: 'Transport & Vehicle',
+    accent: 'from-orange-500 via-amber-400 to-orange-300',
+    description: 'A modern transport and vehicle business website built to showcase services, fleet, and drive customer enquiries.',
+  },
+  {
+    title: 'Apex Machinery Technology',
+    url: 'https://apexmachinerytechnology.in/',
+    image: projectImageApex,
+    domain: 'apexmachinerytechnology.in',
+    category: 'Industrial & Machinery',
+    accent: 'from-orange-600 via-orange-500 to-amber-400',
+    description: 'An industrial machinery company website designed to highlight products, technical expertise, and business credibility.',
+  },
   {
     title: 'Policy Bima Karalo',
     url: 'https://policybimakaralo.com/',
@@ -778,6 +798,9 @@ const faqs = [
                   alt={`${project.title} - ${project.category} website built by himanshu Tiwari`}
                   className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
                   loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="600"
                 />
             </div>
 

@@ -25,7 +25,7 @@ export const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between px-3 py-3 text-orange-50 md:px-8">
         <div className="flex items-center">
           <Link to="/" onClick={closeMenus}>
-            <img src={logo} alt="himanshu Tiwari website logo" className="h-12" />
+            <img src={logo} alt="" className="h-12" />
           </Link>
         </div>
 

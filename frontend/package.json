@@ -17,17 +17,22 @@
     "@tailwindcss/vite": "^4.0.15",
     "axios": "^1.8.4",
     "dompurify": "^3.2.4",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2",
+    "helmet": "^8.2.0",
     "react": "^18.3.1",
     "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^3.0.0",
     "react-icons": "^5.5.0",
-    "react-quill-new": "^3.8.3",
-    "react-router": "6.30.1",
-    "react-router-dom": "6.30.1",
+    "react-quill-new": "3.7.0",
+    "react-router": "^6.30.4",
+    "react-router-dom": "^6.30.4",
     "react-simple-typewriter": "^5.0.1",
-    "react-typewriter-effect": "^1.1.0",
     "tailwindcss": "^4.0.15"
+  },
+  "overrides": {
+    "quill": "2.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
@@ -38,6 +43,7 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
+    "sharp": "^0.35.3",
     "vite": "^6.2.0"
   }
 }
