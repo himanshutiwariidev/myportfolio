@@ -15,7 +15,7 @@ const getImageUrl = (image) => {
     return image;
   }
 
-  const apiBase = (import.meta.env.VITE_API_URL || 'http://localhost:5001/api').replace('/api', '');
+  const apiBase = (import.meta.env.VITE_API_URL || '/api').replace('/api', '');
   return `${apiBase}${image}`;
 };
 

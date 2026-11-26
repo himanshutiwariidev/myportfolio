@@ -23,7 +23,7 @@ const getImageUrl = (image) => {
     return image;
   }
 
-  return `https://technicaltiwariji.com${image}`;
+  return image;
 };
 
 export const AdminBlogFormPage = () => {
